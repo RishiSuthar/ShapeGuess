@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Guessing game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">RANDOM SHAPE MEMORIZATION</div>
+        <ul class="nav-links">
+            <div class="menu">
+                <li><a href="index.html">PLAY</a></li>
+                <li><a href="howtoplay.html">HOW TO PLAY</a></li>
+                <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="settings.html">SETTINGS</a></li>
+                <button class="buttondark" onclick="toggleDarkMode()">
+                    <img class="darkmodphoto" src="darkmode.png" width="40" height="40" alt="">
+                    <img class="lightmodephoto" src="sun.png" width="40" height="40" alt="" style="display: none;">
+                </button>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="maincontainer">
+        <div class="game-container">
+            <div id="shape1" class="shape">
+                <p>1</p>
+            </div>
+            <div id="shape2" class="shape">
+                <p>2</p>
+            </div>
+            <div id="shape3" class="shape">
+                <p>3</p>
+            </div>
+            <div id="shape4" class="shape">
+                <p>4</p>
+            </div>
+            <br>
+            <button id="startgame" onclick="startgame()">Start game</button>
+        </div>
+
+        <div class="guess-container">
+            <p id="result"></p>
+            <form id="guess-form">
+                <div class="color-guess">
+                    <label>Select a number for <span style="color: blue;">BLUE</span>:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="shape-1-color" value="1" disabled> 1
+                        <input type="radio" name="shape-1-color" value="2" disabled> 2
+                        <input type="radio" name="shape-1-color" value="3" disabled> 3
+                        <input type="radio" name="shape-1-color" value="4" disabled> 4
+                    </div>
+                </div>
+                <br>
+                <div class="color-guess">
+                    <label>Select a number for <span style="color: red;">RED</span>:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="shape-2-color" value="1" disabled> 1
+                        <input type="radio" name="shape-2-color" value="2" disabled> 2
+                        <input type="radio" name="shape-2-color" value="3" disabled> 3
+                        <input type="radio" name="shape-2-color" value="4" disabled> 4
+                    </div>
+                </div>
+                <br>
+                <div class="color-guess">
+                    <label>Select a number for <span style="color: green;">GREEN</span>:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="shape-3-color" value="1" disabled> 1
+                        <input type="radio" name="shape-3-color" value="2" disabled> 2
+                        <input type="radio" name="shape-3-color" value="3" disabled> 3
+                        <input type="radio" name="shape-3-color" value="4" disabled> 4
+                    </div>
+                </div>
+                <br>
+                <div class="color-guess">
+                    <label>Select a number for <span style="color: orange;">ORANGE</span>:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="shape-4-color" value="1" disabled> 1
+                        <input type="radio" name="shape-4-color" value="2" disabled> 2
+                        <input type="radio" name="shape-4-color" value="3" disabled> 3
+                        <input type="radio" name="shape-4-color" value="4" disabled> 4
+                    </div>
+                </div>
+                <br>
+                <button id="checkGuess" type="button" onclick="checkGuessNumbers()">Check Guess</button>
+            </form>
+            <p id="result2"></p>
+        </div>
+    </div>
+    <span>&#169; Rishi Suthar 2023</span>
+</body>
+</html>

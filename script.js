@@ -1,0 +1,161 @@
+function toggleDarkMode() {
+    const darkModeIcon = document.querySelector(".darkmodphoto");
+    const lightModeIcon = document.querySelector(".lightmodephoto");
+
+    if (document.body.classList.contains("dark-mode")) {
+        document.body.classList.remove("dark-mode");
+        darkModeIcon.style.display = "block";
+        lightModeIcon.style.display = "none";
+    } else {
+        document.body.classList.add("dark-mode");
+        darkModeIcon.style.display = "none";
+        lightModeIcon.style.display = "block";
+    }
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+
+let shuffledNumbers = [];
+let shuffledColors = [];
+let assignedColors = {};
+let score = 0;
+let timer = 5000;
+let highscore = 0;
+
+
+function startgame() {
+
+    computerguesses = [];
+    userguesses = [];
+
+    shuffledNumbers = [1, 2, 3, 4];
+    shuffleArray(shuffledNumbers);
+    shuffledColors = ['blue', 'red', 'green', 'orange'];
+    shuffleArray(shuffledColors);
+
+
+    const startgameButton = document.getElementById('startgame');
+    startgameButton.disabled = true;
+
+    const checkguessButton = document.getElementById('checkGuess');
+    checkguessButton.disabled = true;
+
+
+    const shapes = document.querySelectorAll('.shape p');
+
+    for (let i = 0; i < shuffledColors.length; i++) {
+        shapes[i].textContent = shuffledNumbers[i]; 
+        const shapeId = `shape${i + 1}`;
+        const shape = document.getElementById(shapeId);
+        shape.style.backgroundColor = shuffledColors[i]; 
+        assignedColors[shapeId] = { color: shuffledColors[i], number: shuffledNumbers[i] };
+    }
+
+    console.log(assignedColors)
+
+    setTimeout(() => {
+        for (let i = 0; i < shapes.length; i++) {
+            shapes[i].textContent = '';
+            const shapeId = `shape${i + 1}`;
+            const shape = document.getElementById(shapeId);
+            shape.style.backgroundColor = 'black';
+        }
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+        for (const radioButton of radioButtons) {
+            radioButton.removeAttribute('disabled');
+        }
+        checkguessButton.disabled = false;
+
+    }, timer);
+}
+
+function getNumberForColor(color) {
+    for (const shapeId in assignedColors) {
+        if (assignedColors[shapeId].color === color) {
+            return assignedColors[shapeId].number;
+        }
+    }
+    return null; 
+}
+
+
+function checkGuessNumbers() {
+
+
+    computerguesses.push(getNumberForColor('blue'), getNumberForColor('red'), getNumberForColor('green'), getNumberForColor('orange'));
+
+    const resultElement = document.getElementById("result");
+    const result2Element = document.getElementById("result2");
+    let correctGuess = true;
+
+
+    for(let i = 0; i <= 3; i++) {
+        var userGuess = getSelectedRadioValue('shape-' + (i + 1) + '-color');
+        userguesses.push(userGuess)
+    }
+
+    
+    for (let i = 0; i < 4; i++) {
+        if (userguesses[i] !== computerguesses[i]) {
+            correctGuess = false;
+            break;
+        }
+    }
+
+
+
+    const checkGuessButton = document.getElementById('checkGuess');
+    checkGuessButton.disabled = true; // Disable the "checkGuess" button
+
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    for (const radioButton of radioButtons) {
+        radioButton.setAttribute('disabled', true);
+    }
+
+
+    if (correctGuess) {
+        score++;
+        if (score > highscore) {
+            highscore = score;
+        }
+        timer -= 500;
+        resultElement.textContent = "Correct guess!";
+        resultElement.style.color = "green";
+        result2Element.textContent = `Your score: ${score} - HIGH SCORE: ${highscore}`;
+        startgame();
+    } else {
+        timer = 5000;
+        score = 0;
+        resultElement.textContent = "Incorrect guess. Try again!";
+        resultElement.style.color = "red";
+        result2Element.textContent = `Your score: ${score} - HIGH SCORE: ${highscore}`;
+
+        startgame();
+    }
+}
+
+function getSelectedRadioValue(name) {
+    const radioButtons = document.querySelectorAll(`input[name="${name}"]`);
+    for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+            return parseInt(radioButton.value);
+        }
+    }
+    return null;
+}
+
+function getAssignedNumber(color) {
+    for (const shapeId in assignedColors) {
+        if (assignedColors[shapeId].color === color) {
+            return assignedColors[shapeId].number;
+        }
+    }
+    return null;
+}

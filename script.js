@@ -1,3 +1,7 @@
+let highscore = parseInt(localStorage.getItem('highscore')) || 0;
+let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+
+// Function to toggle dark mode
 function toggleDarkMode() {
     const darkModeIcon = document.querySelector(".darkmodphoto");
     const lightModeIcon = document.querySelector(".lightmodephoto");
@@ -6,12 +10,18 @@ function toggleDarkMode() {
         document.body.classList.remove("dark-mode");
         darkModeIcon.style.display = "block";
         lightModeIcon.style.display = "none";
+        darkModeEnabled = false;
     } else {
         document.body.classList.add("dark-mode");
         darkModeIcon.style.display = "none";
         lightModeIcon.style.display = "block";
+        darkModeEnabled = true;
     }
+
+    // Save dark mode setting to localStorage
+    localStorage.setItem('darkModeEnabled', darkModeEnabled);
 }
+
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -26,7 +36,7 @@ let shuffledColors = [];
 let assignedColors = {};
 let score = 0;
 let timer = 5000;
-let highscore = 0;
+
 
 
 function startgame() {
@@ -159,3 +169,9 @@ function getAssignedNumber(color) {
     }
     return null;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (darkModeEnabled) {
+        document.body.classList.add("dark-mode");
+    }
+});

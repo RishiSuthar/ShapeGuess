@@ -23,6 +23,7 @@ function toggleDarkMode() {
 }
 
 
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -170,8 +171,19 @@ function getAssignedNumber(color) {
     return null;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function() {
+    const darkModeIcon = document.querySelector(".darkmodphoto");
+    const lightModeIcon = document.querySelector(".lightmodephoto");
+
     if (darkModeEnabled) {
         document.body.classList.add("dark-mode");
+        darkModeIcon.style.display = "none";
+        lightModeIcon.style.display = "block";
+    } else {
+        document.body.classList.remove("dark-mode");
+        darkModeIcon.style.display = "block";
+        lightModeIcon.style.display = "none";
     }
 });
+
+

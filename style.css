@@ -57,15 +57,10 @@ body {
     font-size: 20px;
 }
 
-.menu li:hover {
-    background-color: #4c9e9e;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
 
 .menu li {
     color: teal;
-    padding: 5px 10px;
+    padding: 2px 20px;
 }
 
 

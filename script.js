@@ -135,6 +135,7 @@ function checkGuessNumbers() {
         score++;
         if (score > highscore) {
             highscore = score;
+            localStorage.setItem('highscore', highscore);
         }
         timer -= 500;
         resultElement.textContent = "Correct guess!";

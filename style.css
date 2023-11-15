@@ -459,9 +459,14 @@ float: right;
   transform: translateY(-2px);
 }
 
-@media (min-width: 768px) {
-  #checkGuess {
-    padding: 16px 44px;
-    min-width: 10px;
-  }
+
+
+.menu-icon {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
 }
+
+
+
+
+

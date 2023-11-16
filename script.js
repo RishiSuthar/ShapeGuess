@@ -1,6 +1,15 @@
 let highscore = parseInt(localStorage.getItem('highscore')) || 0;
 let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
 
+
+
+function startup() {
+
+    const result2Element = document.getElementById("result2");
+    result2Element.textContent = `Your HIGH SCORE: ${highscore}`;
+    console.log("hello world")
+}
+
 // Function to toggle dark mode
 function toggleDarkMode() {
     const darkModeIcon = document.querySelector(".darkmodphoto");

@@ -20,7 +20,7 @@
                 <li><a href="index.html">PLAY</a></li>
                 <li><a href="howtoplay.html">INSTRUCTIONS</a></li>
                 <li><a href="testimonials.html">TESTIMONIALS</a></li>
-                <li><a href="settings.html">SETTINGS</a></li>
+                <li><a href="#settings" onclick="showSettings()">SETTINGS</a></li>
                 <button class="buttondark" onclick="toggleDarkMode()">
                     <img class="darkmodphoto" src="darkmode.png" width="40" height="40" alt="">
                     <img class="lightmodephoto" src="test.png" width="40" height="40" alt="" style="display: none;">
@@ -30,7 +30,7 @@
     </nav>
 
     <div class="maincontainer">
-        <div class="game-container">
+        <div class="game-container"  id="game-container">
             <div id="shape1" class="shape">
                 <p>1</p>
             </div>
@@ -47,7 +47,20 @@
             <button id="startgame" onclick="startgame()">Start game</button>
         </div>
 
-        <div class="guess-container">
+
+        <div id="settings-container" class="settings-container" style="display: none;">
+            <div class="settingsmenu">
+                <div class="soundsmenu">
+                    <p>SOUND</p>
+                    <button id="soundOnButton" onclick="soundon()">ON</button>
+                    <button id="soundOffButton" onclick="soundoff()">OFF</button>
+                </div>
+                <button id="gobacknewbutton" onclick="closesettings()">Close</button>
+            </div>
+        </div>
+
+
+        <div class="guess-container" id="newcont">
             <p id="result">Click Start Game to begin</p>
             <form id="guess-form">
                 <div class="color-guess">

@@ -2,13 +2,67 @@ let highscore = parseInt(localStorage.getItem('highscore')) || 0;
 let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
 
 
+soundEnabled = true;
+
+
+function playSound(soundFile) {
+    if (soundEnabled) {
+        const audio = new Audio(soundFile);
+        audio.play();
+        console.log("play");
+    }
+    else {
+        console.log("didnt play")
+    }
+}
+
+
+
+function showSettings() {
+    const gameContainer = document.getElementById('game-container');
+    const settingsContainer = document.getElementById('settings-container');
+    const guessingcont = document.getElementById('newcont');
+
+    gameContainer.style.display = 'none';
+    guessingcont.style.display = 'none';
+    settingsContainer.style.display = 'block';
+
+}
+
+function closesettings() {
+    const gameContainer = document.getElementById('game-container');
+    const settingsContainer = document.getElementById('settings-container');
+    const guessingcont = document.getElementById('newcont');
+
+    settingsContainer.style.display = 'none';
+    gameContainer.style.display = 'block';
+    guessingcont.style.display = 'block';
+}
+
+
+
+function soundon() {
+    soundEnabled = true;
+    console.log(soundEnabled);
+    document.getElementById("soundOffButton").disabled = false;
+    document.getElementById("soundOnButton").disabled = true;
+
+}
+
+function soundoff() {
+    soundEnabled = false;
+    console.log(soundEnabled);
+    document.getElementById("soundOnButton").disabled = false;
+    document.getElementById("soundOffButton").disabled = true;
+}
 
 function startup() {
-
     const result2Element = document.getElementById("result2");
     result2Element.textContent = `Your HIGH SCORE: ${highscore}`;
     console.log("hello world")
 }
+
+
 
 // Function to toggle dark mode
 function toggleDarkMode() {
@@ -150,6 +204,7 @@ function checkGuessNumbers() {
         resultElement.textContent = "Correct guess!";
         resultElement.style.color = "green";
         result2Element.textContent = `Your score: ${score} - HIGH SCORE: ${highscore}`;
+        playSound('ding.mp3');
         startgame();
     } else {
         timer = 5000;
@@ -157,7 +212,7 @@ function checkGuessNumbers() {
         resultElement.textContent = "Incorrect guess. Try again!";
         resultElement.style.color = "red";
         result2Element.textContent = `Your score: ${score} - HIGH SCORE: ${highscore}`;
-
+        playSound('buzzer.mp3');
         startgame();
     }
 }

@@ -9,10 +9,8 @@ function playSound(soundFile) {
     if (soundEnabled) {
         const audio = new Audio(soundFile);
         audio.play();
-        console.log("play");
     }
     else {
-        console.log("didnt play")
     }
 }
 
@@ -45,7 +43,6 @@ function closesettings() {
 
 function soundon() {
     soundEnabled = true;
-    console.log(soundEnabled);
     document.getElementById("soundOffButton").disabled = false;
     document.getElementById("soundOnButton").disabled = true;
 
@@ -53,7 +50,6 @@ function soundon() {
 
 function soundoff() {
     soundEnabled = false;
-    console.log(soundEnabled);
     document.getElementById("soundOnButton").disabled = false;
     document.getElementById("soundOffButton").disabled = true;
 }
@@ -61,7 +57,6 @@ function soundoff() {
 function startup() {
     const result2Element = document.getElementById("result2");
     result2Element.textContent = `Your HIGH SCORE: ${highscore}`;
-    console.log("hello world")
 }
 
 

@@ -9,8 +9,10 @@ body {
 }
 
 .radio-group input[type="radio"] {
-    display: none; /* Hide the default radio button */
+    display: none; 
 }
+
+
 
 .radio-group label {
     display: inline-block;
@@ -22,7 +24,7 @@ body {
 }
 
 .radio-group input[type="radio"]:checked + label {
-    background-color: rgb(78, 149, 255); /* Highlight the selected radio button */
+    background-color: rgb(78, 149, 255); 
 }
 
 .navbar {
@@ -34,8 +36,8 @@ body {
     padding: 0;
     background: none;
     outline: none;
-    border: none; /* Add this line to remove the border */
-    cursor: pointer; /* Add this line to show pointer cursor on hover */
+    border: none; 
+    cursor: pointer; 
 }
 
 
@@ -64,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     background-color:  rgb(54, 134, 255);
     color: #fff;
     height: 40px;
@@ -72,7 +74,7 @@ body {
 
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     color: white;
 
 }
@@ -167,10 +169,17 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px;
+        padding: 8px;
         background-color:  rgb(0, 46, 114);
         color: #fff;
     }
+    .settingsmenu {
+        margin: 20px 500px; /* Center the menu horizontally */
+        width: 500px;
+        background-color: rgba(0, 43, 142, 0.445);
+    
+    }
+
 }
 
 .nav-links a {
@@ -197,11 +206,6 @@ body {
     width: 300px;
 }
 
-.settingsmenu {
-    width: 50%;
-    height: 500px;
-    background-color: rgba(178, 201, 255, 0.5);
-}
 
 .themesbutton {
     display: flex;
@@ -514,22 +518,13 @@ float: right;
 }
 
 
-.modesmenu {
-    padding: 50px;
-    font-family:'Poppins', sans-serif;
-
-}
-
 .soundsmenu {
     font-family:'Poppins', sans-serif;
     padding: 50px;
     margin: auto;
 }
 
-.modesmenu button {
-    padding: 20px;
 
-}
 
 .soundsmenu button {
     padding: 20px;
@@ -538,8 +533,21 @@ float: right;
 
 
 .settingsmenu {
-    margin: 20px 50vh; /* Center the menu horizontally */
+    margin: 20px 500px; /* Center the menu horizontally */
     width: 500px;
+    background-color: rgba(0, 76, 255, 0.626);
 
 }
 
+
+#howtoplaygame {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#paragraph {
+    color: white;
+}

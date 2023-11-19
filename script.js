@@ -30,6 +30,8 @@ function showSettings() {
 }
 
 function closesettings() {
+
+    history.back()
     const gameContainer = document.getElementById('game-container');
     const settingsContainer = document.getElementById('settings-container');
     const guessingcont = document.getElementById('newcont');

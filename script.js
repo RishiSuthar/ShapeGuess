@@ -254,3 +254,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieConsent = document.getElementById('cookie-consent');
+
+    if (!localStorage.getItem('cookieConsentDismissed')) {
+        cookieConsent.style.display = 'block';
+    }
+});
+
+function dismissCookieConsent() {
+    const cookieConsent = document.getElementById('cookie-consent');
+    cookieConsent.style.display = 'none';
+    localStorage.setItem('cookieConsentDismissed', 'true');
+}

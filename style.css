@@ -44,19 +44,19 @@ body {
 
 .buttondark .lightmodephoto {
     outline: none;
-    background-color: transparent; /* Set background color to transparent */
+    background-color: transparent; 
     padding: 2px;
     padding-bottom: 10px;
-    cursor: pointer; /* Add this line to show pointer cursor on hover */
+    cursor: pointer;
     border: none;
 }
 
 
 .lightmodephoto {
-    background-color: transparent; /* Set background color to transparent */
+    background-color: transparent; 
     padding: 2px;
     padding-bottom: 10px;
-    cursor: pointer; /* Add this line to show pointer cursor on hover */
+    cursor: pointer;
 }
 
 
@@ -174,7 +174,7 @@ body {
         color: #fff;
     }
     .settingsmenu {
-        margin: 20px 500px; /* Center the menu horizontally */
+        margin: 20px 500px;
         width: 500px;
         background-color: rgba(0, 43, 142, 0.445);
     
@@ -506,7 +506,7 @@ float: right;
 
 
 .menu-icon {
-    display: none; /* Hide by default on larger screens */
+    display: none; 
     cursor: pointer;
 }
 
@@ -533,7 +533,7 @@ float: right;
 
 
 .settingsmenu {
-    margin: 20px 500px; /* Center the menu horizontally */
+    margin: 20px 500px; 
     width: 500px;
     background-color: rgba(0, 76, 255, 0.626);
 
@@ -553,8 +553,6 @@ float: right;
 }
 
 
-
-/* Cookie consent styles */
 .cookie-consent {
     font-family:'Poppins', sans-serif;
     position: fixed;

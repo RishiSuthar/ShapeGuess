@@ -66,7 +66,7 @@ function startup() {
 
 
 
-// Function to toggle dark mode
+
 function toggleDarkMode() {
     const darkModeIcon = document.querySelector(".darkmodphoto");
     const lightModeIcon = document.querySelector(".lightmodephoto");
@@ -83,7 +83,7 @@ function toggleDarkMode() {
         darkModeEnabled = true;
     }
 
-    // Save dark mode setting to localStorage
+
     localStorage.setItem('darkModeEnabled', darkModeEnabled);
 }
 
@@ -188,7 +188,7 @@ function checkGuessNumbers() {
 
 
     const checkGuessButton = document.getElementById('checkGuess');
-    checkGuessButton.disabled = true; // Disable the "checkGuess" button
+    checkGuessButton.disabled = true; 
 
     const radioButtons = document.querySelectorAll('input[type="radio"]');
     for (const radioButton of radioButtons) {

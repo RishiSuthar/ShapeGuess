@@ -12,15 +12,29 @@ body {
     display: none; 
 }
 
+.color-guess {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px; 
+}
+
+.color-block {
+    width: 50px;
+    height: 50px; 
+    display: inline-block;
+    margin-right: 10px; 
+}
 
 
 .radio-group label {
     display: inline-block;
     border: 2px solid #ccc;
+    text-align: center;
     padding: 8px;
-    margin: 4px;
+    width: 20px;
+    margin: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .radio-group input[type="radio"]:checked + label {
@@ -201,11 +215,6 @@ body {
     background-color: white;
 }
 
-.game-container {
-    margin: 50px auto;
-    width: 300px;
-}
-
 
 .themesbutton {
     display: flex;
@@ -217,13 +226,15 @@ body {
 
 .shape {
     width: 200px;
-    height: 100px;
-    display: block;
-    padding: 10px;
-    margin: 10px;
+    height: 200px;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 5px;
+    position: relative;
 }
 
-#shape1 {
+#shape1 {   
     background-color: blue;
 }
 
@@ -240,14 +251,12 @@ body {
 }
 
 .shape p {
-    display: flex;
-    padding-left: 70px;
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
+    font-size: 80px;
     color: white;
     transition: color 1s;
-
 }
+
 
 #startgame {
     display: flex;
@@ -260,10 +269,12 @@ body {
 .maincontainer {
     display: flex;
     justify-content: space-between;
+    margin: 30px;
 }
 
 .game-container {
     margin: auto;
+    width: 600px;
 
 }
 
@@ -274,9 +285,8 @@ body {
 
 .guess-container {
     float: right;
-    margin-right: 200px;
     text-align: right;
-    padding-top: 50px;
+    margin: auto;
 }
 
 label {
@@ -306,7 +316,8 @@ label {
 
 #result {
     margin-top: 15px;
-    padding: 20px;
+    margin-bottom: 50px;
+    padding: 0px;
     font-family: 'Poppins', sans-serif;
     color:  rgb(54, 134, 255);
 }
@@ -316,13 +327,15 @@ label {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color:  rgb(126, 178, 255);
+    height: 70px;
+    width: 150px;
+    color: rgb(126, 178, 255);
     text-align: center;
     background-color: #000000;
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 60px 0;
+    margin: auto;
 }
 
 .newer {
@@ -423,10 +436,14 @@ label {
   margin: 0 0 20px;
 }
 
+#startbuttondiv {
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
 
 #startgame {
-  align-items: center;
+    align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
   border: 0;
@@ -439,12 +456,11 @@ label {
   font-family: 'Poppins', sans-serif;;
   height: 48px;
   justify-content: center;
-  line-height: 1;
+  line-height: 10;
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
+  padding-left: 40px;
+  padding-right:40px;
   text-align: left;
   text-decoration: none;
   transition: box-shadow .15s,transform .15s;
@@ -472,7 +488,7 @@ label {
 
 
 #checkGuess {
-float: right;
+float: left;
   background-color: #0a6bff;
   border-radius: 4px;
   border: 0;

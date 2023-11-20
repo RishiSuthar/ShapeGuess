@@ -200,7 +200,7 @@ function checkGuessNumbers() {
         timer -= 500;
         resultElement.textContent = "Correct guess!";
         resultElement.style.color = "green";
-        result2Element.textContent = `Your score: ${score} - HIGH SCORE: ${highscore}`;
+        result2Element.textContent = `Your score: ${score}  HIGH SCORE: ${highscore}`;
         playSound('ding.mp3');
         startgame();
     } else {
@@ -208,7 +208,7 @@ function checkGuessNumbers() {
         score = 0;
         resultElement.textContent = "Incorrect guess. Try again!";
         resultElement.style.color = "red";
-        result2Element.textContent = `Your score: ${score} - HIGH SCORE: ${highscore}`;
+        result2Element.textContent = `Your score: ${score}  HIGH SCORE: ${highscore}`;
         playSound('buzzer.mp3');
         startgame();
     }

@@ -31,9 +31,11 @@
     </nav>
 
 
-
     <div class="maincontainer">
         <div class="game-container"  id="game-container">
+            <div id="startbuttondiv">
+                <button id="startgame" onclick="startgame()">Start game</button>
+            </div>
             <div id="shape1" class="shape">
                 <p>1</p>
             </div>
@@ -47,9 +49,9 @@
                 <p>4</p>
             </div>
             <br>
-            <button id="startgame" onclick="startgame()">Start game</button>
+            <br>
+            <p id="result2"></p>
         </div>
-
 
         <div id="settings-container" class="settings-container" style="display: none;">
             <div class="settingsmenu">
@@ -67,7 +69,7 @@
             <p id="result">Click Start Game to begin</p>
             <form id="guess-form">
                 <div class="color-guess">
-                    <label>Select a number for <span style="color: rgb(84, 84, 255);">BLUE</span>:</label>
+                    <div class="color-block" style="background-color: blue;"></div>
                     <div class="radio-group">
                         <input type="radio" id="shape-1-color-1" name="shape-1-color" value="1" disabled>
                         <label for="shape-1-color-1">1</label>
@@ -82,9 +84,8 @@
                         <label for="shape-1-color-4">4</label>
                     </div>
                 </div>
-                <br>
                 <div class="color-guess">
-                    <label>Select a number for <span style="color: rgb(255, 59, 59);">RED</span>:</label>
+                    <div class="color-block" style="background-color: red;"></div>
                     <div class="radio-group">
                         <input type="radio" id="shape-2-color-1" name="shape-2-color" value="1" disabled>
                         <label for="shape-2-color-1">1</label>
@@ -99,9 +100,8 @@
                         <label for="shape-2-color-4">4</label>
                     </div>
                 </div>
-                <br>
                 <div class="color-guess">
-                    <label>Select a number for <span style="color: rgb(0, 197, 0);">GREEN</span>:</label>
+                    <div class="color-block" style="background-color: green;"></div>
                     <div class="radio-group">
                         <input type="radio" id="shape-3-color-1" name="shape-3-color" value="1" disabled>
                         <label for="shape-3-color-1">1</label>
@@ -116,9 +116,8 @@
                         <label for="shape-3-color-4">4</label>
                     </div>
                 </div>
-                <br>
                 <div class="color-guess">
-                    <label>Select a number for <span style="color: orange;">ORANGE</span>:</label>
+                    <div class="color-block" style="background-color: orange;"></div>
                     <div class="radio-group">
                         <input type="radio" id="shape-4-color-1" name="shape-4-color" value="1" disabled>
                         <label for="shape-4-color-1">1</label>
@@ -133,15 +132,15 @@
                         <label for="shape-4-color-4">4</label>
                     </div>
                 </div>
-                <br>
                 <button id="checkGuess" type="button" onclick="checkGuessNumbers()">Check Guess</button>
             </form>
-            <p id="result2"></p>
         </div>
+
         <div id="cookie-consent" class="cookie-consent">
             <p>This website uses cookies to ensure you get the best experience on our website.</p>
             <button onclick="dismissCookieConsent()">Got it!</button>
         </div>
+
     </div>
     <span id="footer">&#169; The fun guys 2023</span>
 </body>

@@ -6,6 +6,7 @@
     <title>Testimonials</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -13,21 +14,23 @@
 
 
 <div id="testimonialsnew">
-  <section id="testimonial-form-2">
-    <h2>Please leave us a testimonial</h2>
-    <form id="userTestimonialForm-2" action="submit_testimonial.php" method="post">
+  <div id="testimonialsnew">
+    <section id="testimonial-form-2">
+      <h2>Please leave us a testimonial</h2>
+      <form id="userTestimonialForm-2">
         <label for="testimonial-2">Your Testimonial:</label>
         <textarea id="testimonial-2" name="testimonial-2" rows="4" cols="50" required></textarea>
-  
+    
         <label for="name-2">Your Name:</label>
         <input type="text" id="name-2" name="name-2" required>
-  
+    
         <label for="affiliation-2">Your Affiliation:</label>
         <input type="text" id="affiliation-2" name="affiliation-2">
-  
-        <button type="submit">Submit Testimonial</button>
+    
+        <button type="button" onclick="submitTestimonial()">Submit Testimonial</button>
     </form>
-  </section>
+    </section>
+  </div>
 
 
 

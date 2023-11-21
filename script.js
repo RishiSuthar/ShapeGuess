@@ -77,8 +77,6 @@ function toggleDarkMode() {
         lightModeIcon.style.display = "block";
         darkModeEnabled = true;
     }
-
-
     localStorage.setItem('darkModeEnabled', darkModeEnabled);
 }
 
@@ -263,3 +261,5 @@ function dismissCookieConsent() {
     cookieConsent.style.display = 'none';
     localStorage.setItem('cookieConsentDismissed', 'true');
 }
+
+

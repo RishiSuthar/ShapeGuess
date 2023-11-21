@@ -193,6 +193,22 @@ body {
         background-color: rgba(0, 43, 142, 0.445);
     
     }
+    .snip1533 {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        color: #ffffff;
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        margin: 35px 10px 10px;
+        max-width: 310px;
+        min-width: 250px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        background-color: #3f3f3f;
+        border-radius: 5px;
+        border-top: 5px solid  rgb(54, 134, 255);
+      }
 
 }
 

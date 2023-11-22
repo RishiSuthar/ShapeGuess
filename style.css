@@ -794,12 +794,14 @@ background-color:  rgba(0, 30, 100, 0.626)
             margin-bottom: 25px;
         }
         #result {
-            display: none;
+            display: -webkit-flex;
             margin-top: 5px;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
             padding: 0px;
+            padding-left: 60px;
             font-family: 'Poppins', sans-serif;
             color:  rgb(54, 134, 255);
+            font-size: 15px;
         }
         .radio-group input[type='radio'] {
             appearance: none;
@@ -820,6 +822,13 @@ background-color:  rgba(0, 30, 100, 0.626)
         #checkGuess {
             margin-top: 20px;
         }
+        #startgame{
+            align-items: center;
+            font-size: 15px;
+            margin: auto;
+            padding: 20px;
+        }
+        
 
         
 

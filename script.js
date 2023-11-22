@@ -5,6 +5,8 @@ let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
 soundEnabled = true;
 
 
+
+
 function playSound(soundFile) {
     if (soundEnabled) {
         const audio = new Audio(soundFile);
@@ -297,4 +299,10 @@ function submitTestimonial() {
         .catch(function(error) {
             console.error("Error sending email", error);
         });
+}
+
+function toggleMenu() {
+    console.log("Toggle menu function called!");
+    const navLinks = document.getElementById('navLinks');
+    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
 }

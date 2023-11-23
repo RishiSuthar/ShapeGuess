@@ -188,7 +188,8 @@ body {
         color: #fff;
     }
     .settingsmenu {
-        margin: 20px 500px;
+        margin: auto;
+        
         width: 500px;
         background-color: rgba(0, 43, 142, 0.445);
     
@@ -211,7 +212,7 @@ body {
       }
 
       #testimonial-form-2 {
-        max-width: 600px;
+        max-width: auto;
         margin: 0 auto;
         padding: 20px;
         background-color: #404040;
@@ -231,6 +232,7 @@ body {
         margin-top: 10px;
         margin-bottom: 5px;
         color: #d8d8d8;
+        font-size: 20px;
       }
 }
 
@@ -563,6 +565,9 @@ float: left;
     display: none; 
     cursor: pointer;
 }
+.settings-container{
+    margin: auto;
+}
 
 
 #footer { 
@@ -575,7 +580,6 @@ float: left;
 .soundsmenu {
     font-family:'Poppins', sans-serif;
     padding: 50px;
-    margin: auto;
 }
 
 
@@ -587,8 +591,8 @@ float: left;
 
 
 .settingsmenu {
-    margin: 20px 500px; 
-    width: 500px;
+    margin: auto;
+    width: auto;
     background-color: rgba(0, 76, 255, 0.626);
 
 }
@@ -641,18 +645,19 @@ float: left;
 
 
 #testimonialsnew{
-    display: inline-flex;
+    display: inline-block;
+    margin: auto;
 }
 
 
 #testimonial-form-2 {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: auto;
+    margin: auto;
     padding: 20px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-right: 20px;
+
 }
 
 #testimonial-form-2 h2 {
@@ -662,14 +667,16 @@ font-size: 20px;
 }
 
 #userTestimonialForm-2 {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
 }
 
 #userTestimonialForm-2 label {
 margin-top: 10px;
 margin-bottom: 5px;
 color: #555;
+font-size: 20px;
 }
 
 #userTestimonialForm-2 textarea,
@@ -678,6 +685,7 @@ width: 100%;
 padding: 8px;
 margin-bottom: 10px;
 box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
 #userTestimonialForm-2 button {
@@ -729,8 +737,8 @@ background-color:  rgba(0, 30, 100, 0.626)
         justify-content: center;
         margin: 2px;
         position: relative;
-        margin-bottom: 20px;
-        margin-top:20px ;
+        margin-bottom: 5px;
+        margin-top:5px ;
     }
     .shape p {
         font-family: 'Poppins', sans-serif;
@@ -787,7 +795,7 @@ background-color:  rgba(0, 30, 100, 0.626)
             color: rgb(126, 178, 255);
             text-align: center;
             background-color: #000000;
-            padding: 10px;
+            padding: 5px;
             border-radius: 100px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             margin: auto;
@@ -804,9 +812,10 @@ background-color:  rgba(0, 30, 100, 0.626)
             font-size: 15px;
         }
         .radio-group input[type='radio'] {
+            font-size: 5px;
             appearance: none;
             width: 2px;
-            height: 5px;
+            height: 2px;
             border: 1px solid #999;
             border-radius: 50%;
             outline: none;
@@ -820,7 +829,10 @@ background-color:  rgba(0, 30, 100, 0.626)
             margin-bottom: 10px; 
         }
         #checkGuess {
+            margin-left: 100px;
             margin-top: 20px;
+            font-size: 15px;
+            padding: 10px;
         }
         #startgame{
             align-items: center;
@@ -828,8 +840,52 @@ background-color:  rgba(0, 30, 100, 0.626)
             margin: auto;
             padding: 20px;
         }
-        
+        #snip1533{
+            flex-direction: column;
+        }
+        #testimonialsnew{
+            display: inline-flex;
+            width: 100%;
+            height: 10%;
+            margin: 0;
+        }
 
+        #gobacknewbutton {
+            position: inherit;
+            margin: 20px;
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            border: none;
+            padding: 0 56px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 7px;
+            background-color: #0070f3;
+            color: white;
+            font-weight: 400;
+            font-size: 16px;
+            box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+            transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+            :hover{
+                background: rgba(0,118,255,0.9);
+                box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+            }
         
+        }
+        .soundsmenu {
+            font-family:'Poppins', sans-serif;
+            padding: 0px;
+            margin: auto;
+        }
+        #howtoplaygame{
+            font-size: 18px;
+        }
+        #howtoplaygame p{
+            padding: 5px;
+        }
 
+
+
+    
 }

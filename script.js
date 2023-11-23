@@ -305,4 +305,5 @@ function toggleMenu() {
     console.log("Toggle menu function called!");
     const navLinks = document.getElementById('navLinks');
     navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    
 }

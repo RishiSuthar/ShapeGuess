@@ -301,10 +301,17 @@ function submitTestimonial() {
         });
 }
 
+
 function toggleMenu() {
     console.log("Toggle menu function called!");
     const navLinks = document.getElementById('navLinks');
-    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-    const startbutton = document.getElementById('startgame');
-    startbutton.style.display = startbutton.style.display === "none";
+    const startButtonDiv = document.getElementById('startbuttondiv');
+
+    if (navLinks.style.display === 'block') {
+        navLinks.style.display = 'none';
+        startButtonDiv.style.display = 'block';
+    } else {
+        navLinks.style.display = 'block';
+        startButtonDiv.style.display = 'none';
+    }
 }

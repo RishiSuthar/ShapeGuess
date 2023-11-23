@@ -104,6 +104,7 @@ body {
 .menu li {
     color: rgb(54, 134, 255);
     padding: 2px 20px;
+    list-style: none;
 }
 
 

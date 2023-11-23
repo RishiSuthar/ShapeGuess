@@ -27,6 +27,10 @@ function showSettings() {
     guessingcont.style.display = 'none';
     settingsContainer.style.display = 'block';
 
+    if (window.innerWidth <= 600) {
+        navLinks.style.display = 'none'; 
+    }
+
 }
 
 function closesettings() {

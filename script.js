@@ -306,5 +306,5 @@ function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
     const startbutton = document.getElementById('startgame');
-    startbutton.style.display === 'none';
+    startbutton.style.display = startbutton.style.display === "none";
 }

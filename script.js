@@ -6,7 +6,6 @@ soundEnabled = true;
 
 
 
-
 function playSound(soundFile) {
     if (soundEnabled) {
         const audio = new Audio(soundFile);
@@ -34,6 +33,9 @@ function showSettings() {
 }
 
 function closesettings() {
+    const startButtonDiv = document.getElementById("startbuttondiv");
+    
+    startButtonDiv.style.display = 'block';
 
     history.back()
     const gameContainer = document.getElementById('game-container');
@@ -63,6 +65,11 @@ function soundoff() {
 function startup() {
     const result2Element = document.getElementById("result2");
     result2Element.textContent = `Your HIGH SCORE: ${highscore}`;
+
+    const startButtonDiv = document.getElementById("startbuttondiv");
+    
+    // Show the start button initially
+    startButtonDiv.style.display = 'block';
 }
 
 

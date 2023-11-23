@@ -351,14 +351,7 @@ label {
     border: 1px solid red;
 }
 
-#howtoplaygame {
 
-    margin: 20px;
-    flex: auto;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-
-}
 
 #result {
     margin-top: 15px;
@@ -610,8 +603,16 @@ float: left;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    margin: 20px;
+    flex: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
+#howtoplaygame p{
+    padding: 10px;
+}
 #paragraph {
     color: white;
 }

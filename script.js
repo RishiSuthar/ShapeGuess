@@ -34,7 +34,6 @@ function showSettings() {
 
 function closesettings() {
     const startButtonDiv = document.getElementById("startbuttondiv");
-    
     startButtonDiv.style.display = 'block';
 
     history.back()
@@ -90,6 +89,12 @@ function toggleDarkMode() {
         lightModeIcon.style.display = "block";
         darkModeEnabled = true;
     }
+    if (window.innerWidth <= 600) {
+        navLinks.style.display = 'none';
+        const startButtonDiv = document.getElementById("startbuttondiv");
+        startButtonDiv.style.display = 'block';
+    }
+
     localStorage.setItem('darkModeEnabled', darkModeEnabled);
 }
 

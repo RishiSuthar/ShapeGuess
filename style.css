@@ -188,8 +188,7 @@ body {
     }
     .settingsmenu {
         margin: auto;
-        
-        width: 500px;
+        width: auto;
         background-color: rgba(0, 43, 142, 0.445);
     
     }
@@ -212,7 +211,7 @@ body {
 
       #testimonial-form-2 {
         max-width: auto;
-        margin: 0 auto;
+        margin: auto;
         padding: 20px;
         background-color: #404040;
         border: 1px solid #b5b5b5;
@@ -233,6 +232,12 @@ body {
         color: #d8d8d8;
         font-size: 20px;
       }
+      #userTestimonialForm-2 {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
 }
 
 .nav-links a {

@@ -66,8 +66,7 @@ function startup() {
     result2Element.textContent = `Your HIGH SCORE: ${highscore}`;
 
     const startButtonDiv = document.getElementById("startbuttondiv");
-    
-    // Show the start button initially
+
     startButtonDiv.style.display = 'block';
 }
 
@@ -117,6 +116,8 @@ let timer = 5000;
 
 
 function startgame() {
+    const startButtonDiv = document.getElementById('startbuttondiv');
+    startButtonDiv.style.display = "none";
 
     computerguesses = [];
     userguesses = [];
@@ -290,7 +291,6 @@ function submitTestimonial() {
     var name = document.getElementById('name-2').value;
     var affiliation = document.getElementById('affiliation-2').value;
 
-    // Prepare email parameters
     var emailParams = {
         to_email: "rishibhunji@gmail.com",  
         from_name: name,

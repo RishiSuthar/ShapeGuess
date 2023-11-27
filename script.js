@@ -214,7 +214,7 @@ function checkGuessNumbers() {
             highscore = score;
             localStorage.setItem('highscore', highscore);
         }
-        timer -= 500;
+        timer -= 200;
         resultElement.textContent = "Correct guess!";
         resultElement.style.color = "green";
         result2Element.textContent = `Your score: ${score}  HIGH SCORE: ${highscore}`;

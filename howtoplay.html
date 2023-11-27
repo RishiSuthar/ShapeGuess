@@ -8,8 +8,26 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="menu-icon" onclick="toggleMenu()">MENU ☰</div>
+    <nav class="navbar">
+        <a style="text-decoration: none;" href="index.html">
+            <div class="logo" href="index.html">MEMORIZATION GAME</div>
+        </a>    
+        <ul class="nav-links" >
+            <div class="menu"  id="navLinks">
+                <li><a href="index.html">PLAY</a></li>
+                <li><a href="howtoplay.html">INSTRUCTIONS</a></li>
+                <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="#settings" onclick="showSettings()">SETTINGS</a></li>
+                <button class="buttondark" onclick="toggleDarkMode()">
+                    <img class="darkmodphoto" src="darkmode.png" width="30" height="30" alt="">
+                    <img class="lightmodephoto" src="test.png" width="40" height="40" alt="" style="display: none;">
+                </button>
+            </div>
+        </ul>
+    </nav>
     
-<h1 class="howtoplay_title"> How To Play </h1>
+<h1 class="howtoplay_title"> Game Instructions </h1>
 
 <div id ="howtoplaygame">
     <p>- When you press the Start game button, the images will flash for 5 seconds.</p>

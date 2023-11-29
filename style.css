@@ -248,12 +248,19 @@ body {
     color: white;
 }
 
-.darkmodephoto {
-    padding: 2px;
+.darkmodphoto {
+    padding-right: 2px;
     padding-bottom: 10px;
 }
 
 
+#settingicon{
+    margin: auto;
+    background: none;
+    outline: none;
+    border: none; 
+    cursor: pointer; 
+}
 
 .buttondark {
     padding: 0%;
@@ -895,8 +902,11 @@ background-color:  rgba(0, 30, 100, 0.626)
         #howtoplaygame p{
             padding: 5px;
         }
-
-
+        #settingicon {
+            margin: 20px;
+            padding-right: 200px;
+            margin-bottom: 10px;
+        }
 
     
 }

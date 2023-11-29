@@ -22,10 +22,10 @@
                 <li><a href="index.html">PLAY</a></li>
                 <li><a href="howtoplay.html">INSTRUCTIONS</a></li>
                 <li><a href="testimonials.html">TESTIMONIALS</a></li>
-                <li><a href="#settings" onclick="showSettings()">SETTINGS</a></li>
+                <button id="settingicon" onclick="showSettings()"><img src="settingicon.png"  width="30" height="30" alt=""></button>   
                 <button class="buttondark" onclick="toggleDarkMode()">
                     <img class="darkmodphoto" src="darkmode.png" width="30" height="30" alt="">
-                    <img class="lightmodephoto" src="test.png" width="40" height="40" alt="" style="display: none;">
+                    <img class="lightmodephoto" src="test.png" width="30" height="30" alt="" style="display: none;">
                 </button>
             </div>
         </ul>
@@ -64,7 +64,6 @@
                 <button id="gobacknewbutton" onclick="closesettings()">Close</button>
             </div>
         </div>
-
 
         <div class="guess-container" id="newcont">
             <p id="result">Click Start Game to begin<br>Match the color to the number<br></p>

@@ -319,7 +319,6 @@ function submitTestimonial() {
 
 
 function toggleMenu() {
-    console.log("Toggle menu function called!");
     const navLinks = document.getElementById('navLinks');
     const startButtonDiv = document.getElementById('startbuttondiv');
 

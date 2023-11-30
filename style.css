@@ -86,6 +86,10 @@ body {
     height: 40px;
 }
 
+.menu a{
+    text-decoration: none;
+}
+
 
 .logo {
     font-size: 22px;
@@ -914,4 +918,17 @@ background-color:  rgba(0, 30, 100, 0.626)
 
 #startbuttondiv {
     display: none;
+}
+
+
+
+
+.menu li a:hover {
+    color: #ffffff;
+    font-weight: bold;/* Change color on hover */
+}
+
+/* Add this section to style the logo */
+.logo:hover {
+    color: #c6c6c6; /* Change color on hover */
 }
